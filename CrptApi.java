@@ -12,7 +12,7 @@ import static java.lang.System.out;
 
 
 public class CrptApi {
-    public static final String server_api_url="https://ismp.crpt.ru/api/v3/lk/documents/create";
+    private static final String server_api_url="https://ismp.crpt.ru/api/v3/lk/documents/create";
     private int max_requests_limit;
     private long time_interval_micro_seconds;
     private volatile long start_of_interval_timestamp, number_of_requests_since_beginning_of_interval;
@@ -62,7 +62,7 @@ public class CrptApi {
         }
     }
     private Gson json=new Gson();
-    public String json_encode(Document document){
+    private String json_encode(Document document){
         return json.toJson(document);
     }
     private static void send_https_request_to_url(String url, String json) throws IOException {
