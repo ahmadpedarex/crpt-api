@@ -8,9 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import static java.lang.System.out;
-
-
 public class CrptApi {
     private static final String server_api_url="https://ismp.crpt.ru/api/v3/lk/documents/create";
     private int max_requests_limit;
