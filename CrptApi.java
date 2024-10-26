@@ -23,8 +23,8 @@ public class CrptApi {
         public long to_micro_seconds(){
             return value*unit;
         }
-        public static final long second=1000000,micro_second=1000
-                ,milli_second=1,minute=60*1000000,hour=3600*1000000;
+        public static final long second=1000000,micro_second=1
+                ,milli_second=1000,minute=60*1000000,hour=3600*1000000;
     }
     public CrptApi(TimeUnit timeUnit, int requestLimit){
         time_interval_micro_seconds=timeUnit.to_micro_seconds();
